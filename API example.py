@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[54]:
+# In[1]:
 
 
 ##    Problem: We are asked to provide a code that gets the currency rate for given date in python
@@ -17,7 +17,7 @@
 ##    Authentication: app_id=c92e9bfec2584ff0848965f86681ec37
 
 
-# In[61]:
+# In[2]:
 
 
 # In order to make it easier for end users, we will use input
@@ -27,7 +27,7 @@ b = 'https://openexchangerates.org/api/historical/' + a + '.json?app_id=c92e9bfe
 # First part refers to api's website to use api, a refers to required date, Last part refers to app authentication
 
 
-# In[62]:
+# In[3]:
 
 
 # Sending HTTP request
@@ -42,7 +42,7 @@ rsp = requests.get(b).json()
 rsp
 
 
-# In[63]:
+# In[4]:
 
 
 #lets convert above definition into DataFrame, and add two new columns for currency date and imported date
@@ -54,7 +54,7 @@ pd.set_option('display.max_rows',None)
 df
 
 
-# In[65]:
+# In[5]:
 
 
 # If you want to see only one of the currency:
@@ -62,8 +62,6 @@ print('Please write the abbreviation of required currency:')
 c = input()
 df[df['currency_name']==c]
 
-
-# In[ ]:
 
 
 
